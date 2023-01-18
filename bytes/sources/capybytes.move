@@ -1,7 +1,7 @@
 module bytes::capybytes {
     use std::string;
 
-    use sui::object::{Self, UID};
+    use sui::object::{Self, ID, UID};
     use sui::transfer;
     use sui::tx_context::{Self, TxContext};
 
@@ -57,14 +57,14 @@ module bytes::capybytes {
 
     struct DeadBytesDomain has key, store {
         id: UID,
-        face: bool,
-        weapon_sticker: bool
+        face_nft: ID,
+        sticker_nft: ID
     }
 
     public entry fun mint_nft(
         capy: Capy,
-        face: bool,
-        weapon_sticker: bool,
+        face_nft: ID,
+        sticker_nft: ID,
         _mint_cap: &MintCap<CAPYBYTES>,
         receiver: address,
         ctx: &mut TxContext,
@@ -77,8 +77,8 @@ module bytes::capybytes {
 
         let db_domain = DeadBytesDomain {
             id: object::new(ctx),
-            face,
-            weapon_sticker,
+            face_nft,
+            sticker_nft,
         };
 
         nft::add_domain(&mut nft, db_domain, ctx);

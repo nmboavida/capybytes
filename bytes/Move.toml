@@ -1,0 +1,27 @@
+[package]
+name = "capybytes"
+version = "0.1.0"
+
+[dependencies.Sui]
+git = "https://github.com/MystenLabs/sui.git"
+subdir = "crates/sui-framework"
+# devnet-0.21.0
+rev = "2d709054a08d904b9229a2472af679f210af3827"
+
+[dependencies.NftProtocol]
+git = "https://github.com/Origin-Byte/nft-protocol.git"
+# version 0.18.0
+rev = "60e8589febedfbc66a3879527baf8adea0567544"
+
+[dependencies.sui-capybaras]
+git = "https://github.com/nmboavida/capybytes.git"
+subdir = "capy"
+rev = "54482fcfc1c7e9b75918b610d57de22402376883"
+
+[dependencies.Originmate]
+git = "https://github.com/Origin-Byte/originmate.git"
+# devnet-0.21.0
+rev = "fe192e74e25ed71449996fcb30337ed7232f41e3"
+
+[addresses]
+bytes = "0x7da20427662585ac66bbe5188d0114374c189c92"

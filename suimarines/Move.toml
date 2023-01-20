@@ -1,0 +1,23 @@
+[package]
+name = "suimarines"
+version = "0.1.0"
+
+[dependencies.Sui]
+git = "https://github.com/MystenLabs/sui.git"
+subdir = "crates/sui-framework"
+# devnet-0.22.0
+rev = "e3e28e09ffb7943aa4b46b65e12b630ef36161ef"
+
+[dependencies.Originmate]
+git = "https://github.com/Origin-Byte/originmate.git"
+# devnet-0.22.0
+rev = "271a3edd4571055c83ac08fd920b03e4f36e1241"
+
+[dependencies.NftProtocol]
+git = "https://github.com/Origin-Byte/nft-protocol.git"
+# version 0.19.0
+# 0x31cea8513aa6d078d92823ea42d42600208be721
+rev = "50753d86ef89a58abb9951a71526a9e324858741"
+
+[addresses]
+suimarines = "0x8c4d633c3834265522d3410571da19f3b0920054"
